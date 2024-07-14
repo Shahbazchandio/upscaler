@@ -1,1 +1,1 @@
-web: gunicorn run:app
+web: ./download_models.sh && gunicorn app:app
