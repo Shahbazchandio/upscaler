@@ -1,26 +1,30 @@
 {
-    "name": "flask-image-processor",
-    "env": {
-      "SECRET_KEY": {
-        "description": "A secret key for verifying the integrity of signed cookies",
-        "generator": "secret"
-      },
-      "DATABASE_URL": {
-        "description": "The database connection string",
-        "value": "sqlite:///app.db"
-      }
+  "name": "flask-image-processor",
+  "env": {
+    "SECRET_KEY": {
+      "description": "A secret key for verifying the integrity of signed cookies",
+      "generator": "secret"
     },
-    "regions": ["fra"],
-    "ports": [
-      {
-        "port": 8000,
-        "protocol": "http"
-      }
-    ],
-    "routes": [
-      {
-        "path": "/",
-        "port": 8000
-      }
-    ]
+    "DATABASE_URL": {
+      "description": "The database connection string",
+      "value": "sqlite:///app.db"
+    }
+  },
+  "regions": ["fra"],
+  "ports": [
+    {
+      "port": 8000,
+      "protocol": "http"
+    }
+  ],
+  "routes": [
+    {
+      "path": "/",
+      "port": 8000
+    }
+  ],
+  "resources": {
+    "cpu": "0.25",
+    "memory": "512Mi"
   }
+}
